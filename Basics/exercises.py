@@ -45,7 +45,7 @@ def exercise_four():
   multiple_values_list = [1,1,1,1,1,2,2,2,2,3,3,3,3]
   set_from_multiple_values = set(multiple_values_list)
   for value in set_from_multiple_values:
-    pritn
+    print(value)
 
 def exercise_five():
   print("\n\n exercise five")
