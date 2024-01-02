@@ -15,30 +15,38 @@ def main():
 
 def exercise_one(list_of_numbers):
   print("exercise_one")
-  sequence = [1, 2, 3]
-  sequence_in_list = []
-  for number in list_of_numbers:
-    if len(sequence_in_list) == len(sequence):
-      return True
-    is_next_in_sequence = False
-    if len(sequence_in_list) == 0:
-      is_next_in_sequence = number == sequence[0]
-    else:
-      is_next_in_sequence = number == sequence[len(sequence_in_list)]
-    if is_next_in_sequence:
-      sequence_in_list.append(number)
-  return len(sequence_in_list) == len(sequence)
 
-def exercise_two(str):
+  # METHOD 2: Exercise One
+  for i in range(len(list_of_numbers) - 2):
+    if list_of_numbers[i] == 1 and list_of_numbers[i+1] == 2 and list_of_numbers[i+2] == 3:
+      return True
+  return False
+  # METHOD 1: Exercise One
+  # sequence = [1, 2, 3]
+  # sequence_in_list = []
+  # for number in list_of_numbers:
+  #   if len(sequence_in_list) == len(sequence):
+  #     return True
+  #   is_next_in_sequence = False
+  #   if len(sequence_in_list) == 0:
+  #     is_next_in_sequence = number == sequence[0]
+  #   else:
+  #     is_next_in_sequence = number == sequence[len(sequence_in_list)]
+  #   if is_next_in_sequence:
+  #     sequence_in_list.append(number)
+  # return len(sequence_in_list) == len(sequence)
+
+def exercise_two(string):
   print("exercise_two")
-  new_str = ""
-  for idx in range(len(str)):
-   new_str += str[idx] if idx % 2 == 0 else ""
-  return new_str
+  new_string = ""
+  for idx in range(len(string)):
+   new_string += string[idx] if idx % 2 == 0 else ""
+  return new_string
+
 
 def exercise_three(str1, str2):
   print("exercise_three")
-  return str1.lower().endswith(str2.lower())
+  return str1.lower().endswith(str2.lower()) or str1.lower().endswith(str2.lower())
 
 def fix_teen(num):
   if num == 15 or num == 16 or num <= 12 or num > 19:
